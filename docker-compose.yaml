@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  contract-backend:
+    build: ./contract
+    env_file: ./contract/offchain/.env
+    ports:
+      - target: 3001
+        host_ip: 127.0.0.1
+        published: 3001
+    restart: always
+    network_mode: "host"
+
+  webapp:
+    build: ./webapp
+    env_file:
+      - ./webapp/.env.local
+      - ./webapp/.env
+    ports:
+      - target: 4202
+        host_ip: 0.0.0.0
+        published: 4202
+        protocol: tcp
+    restart: always
+    network_mode: "host"
+
+  oura:
+    build: ./webapp/oura
+    restart: always
+    network_mode: "host"

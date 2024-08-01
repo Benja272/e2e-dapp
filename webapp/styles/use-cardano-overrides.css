@@ -1,0 +1,29 @@
+.cardano-wallet-selector__button {
+  background-color: #38A169;
+  min-width: 180px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: wider;
+  height: 2.25rem;
+  /* Equivalent to 9px based on a 16px font-size */
+  font-size: 16px;
+}
+
+.cardano-wallet-selector__button:hover {
+  background-color: #2f855a;
+}
+
+.cardano-wallet-selector__menu__item button {
+  background-color: #f9fafb;
+  font-weight: bold;
+  letter-spacing: wider;
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  font-size: 17px;
+}
+
+.cardano-wallet-selector__menu__item button:not(:disabled):hover {
+  background-color: #edf2f7;
+}
